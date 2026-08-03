@@ -1,0 +1,13 @@
+:root {
+    --font-display: 'JetBrains Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+}
+
+body {
+    background-color: #EFE0CD;
+    font-family: var(--font-body);
+}
