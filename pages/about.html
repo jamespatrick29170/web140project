@@ -20,28 +20,45 @@
                 </ul>
             </nav>
         </header>
-        <section class="intro">
-            <img src="https://github.com/jamespatrick29170.png" alt="github pfp placeholder" class="pfp">
-            <div class="intro-text"> 
-                <h1>About me</h1>
-                <p>a bunch of stuff about me at some point</p>
-            </div>
-        </section>
-        <section>
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <!--<li>JavaScript</li>-->
-            </ul>
-        </section>
-        <section>
-            <h2>Contact Me</h2>
-            <ul>
-                <li><a href="mailto:jamespatrick29170@proton.me">Email</a></li>
-                <li><a href="https://github.com/jamespatrick29170" target="_blank" rel="noopener noreferrer">Github</a></li>
-                <li><a href="https://linkedin.com/in/james-beebe-272b671ab" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
-            </ul>    
-        </section>
+        <main>
+            <section class="intro">
+                <img src="https://github.com/jamespatrick29170.png" alt="James' profile picture" class="pfp">
+                <div class="intro-text"> 
+                    <h1>About me</h1>
+                    <p>a bunch of stuff about me at some point</p>
+                </div>
+            </section>
+            <section>
+                <h2>Skills</h2>
+                <ul class="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <!--<li>JavaScript</li>-->
+                </ul>
+            </section>
+            <section>
+                <h2>Contact Form</h2>
+                <form>
+                    <fieldset>
+                        <legend>Send me a message</legend>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit">Send</button>
+                    </fieldset>
+                </form>
+            </section>
+            <section>
+                <h2>Contact Me</h2>
+                <ul>
+                    <li><a href="mailto:jamespatrick29170@proton.me">Email</a></li>
+                    <li><a href="https://github.com/jamespatrick29170" target="_blank" rel="noopener noreferrer">Github</a></li>
+                    <li><a href="https://linkedin.com/in/james-beebe-272b671ab" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+                </ul>    
+            </section>
+        </main>
     </body>
 </html>
