@@ -55,6 +55,23 @@ form {
     padding: 16px;
 }
 
+form label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 2px solid var(--terracotta);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
 legend {
     font-family: var(--font-display);
     font-weight: 700;
@@ -70,6 +87,12 @@ ul {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+}
+
+.contacts {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
 }
 
 .intro {
