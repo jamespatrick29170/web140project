@@ -29,6 +29,10 @@ header {
     max-width: 1200px;
 }
 
+header a {
+    color: var(--ivory);
+}
+
 h1, h2, h3 {
     font-family: var(--font-display);
 }
