@@ -33,6 +33,10 @@ header a {
     color: var(--navy);
 }
 
+.contact-links a {
+    color: #000;
+}
+
 h1, h2, h3 {
     font-family: var(--font-display);
 }
