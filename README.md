@@ -7,7 +7,7 @@ Final Project for Campus Web140
 - #000 on #C4694A 5.46:1 (skills tags text on tag background)
 
 ## Accessibility Fixes
-- added <main> landmark to all three pages
+- added `<main>` landmark to all three pages
 - changed alt text from `placeholder` to more descriptive text
 - changed the link color in the header to fix contrast errors
 - left redundant link alerts as those are intentional
