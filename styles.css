@@ -80,6 +80,26 @@ form textarea {
     margin-bottom: 16px;
 }
 
+form input:not(:placeholder-shown):invalid,
+form textarea:not(:placeholder-shown):invalid {
+    background-color: lightcoral;
+    border-color: red;
+}
+
+form input:not(:placeholder-shown):invalid + .error-message,
+form textarea:not(:placeholder-shown):invalid + .error-message {
+    display: block;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+}
+
 legend {
     font-family: var(--font-display);
     font-weight: 700;

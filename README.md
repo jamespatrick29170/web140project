@@ -15,3 +15,7 @@ Final Project for Campus Web140
 ## Gestalt principles
 - Proximity: Project cards are grouped tightly to visually display them all as a set
 - Similarity: Skills tags share shape color and font so they read as related pieces of info
+
+## Form
+- Added 4th input to form
+- dynamic error states included
