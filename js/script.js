@@ -9,8 +9,11 @@ const emailError = emailInput.nextElementSibling;
 const subjectInput = document.querySelector('#subject'); 
 const subjectError = subjectInput.nextElementSibling;
 //message varis
-const messageInput = document.querySelector('#message')
-const messageError = messageInput.nextElementSibling
+const messageInput = document.querySelector('#message');
+const messageError = messageInput.nextElementSibling;
+//nav button varis
+const navButton = document.querySelector('#nav-button');
+const siteNav = document.querySelector('#site-nav');
 
 if (form) {
     form.addEventListener('submit', (event) => {
@@ -65,13 +68,19 @@ if (form) {
     subjectInput.addEventListener('input', () => {
         if (subjectInput.value.trim().length >= 2) {
             subjectError.textContent = '';
-            subjectError.style.display = 'none'
+            subjectError.style.display = 'none';
         }
     });
     messageInput.addEventListener('input', () => {
         if (messageInput.value.trim().length >= 10) {
             messageError.textContent = '';
-            messageError.style.display - 'none'
+            messageError.style.display - 'none';
         }
     })
 }
+
+navButton.addEventListener('click', () => {
+    siteNav.classList.toggle('nav-open');
+    const isOpen = siteNav.classList.contains('nav-open');
+    navButton.setAttribute('aria-expanded', isOpen)
+ })
