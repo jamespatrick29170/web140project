@@ -15,6 +15,8 @@ const messageError = messageInput.nextElementSibling;
 const navButton = document.querySelector('#nav-button');
 const siteNav = document.querySelector('#site-nav');
 
+let isValid = true;
+
 if (form) {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -23,6 +25,7 @@ if (form) {
         if (nameInput.value.trim().length < 2) {
             nameError.textContent = 'Name must be 2 characters or more'
             nameError.style.display = 'block';
+            isValid = false;
         } else {
             nameError.textContent = '';
             nameError.style.display = 'none';
@@ -31,6 +34,7 @@ if (form) {
         if (!emailInput.checkValidity()) {
             emailError.textContent = 'Please enter a valid email address';
             emailError.style.display = 'block';
+            isValid = false;
         } else {
             emailError.textContent = '';
             emailError.style.display = 'none';
@@ -39,6 +43,7 @@ if (form) {
         if (subjectInput.value.trim().length < 2) {
             subjectError.textContent = 'Subject must be 2 characters or more';
             subjectError.style.display = 'block';
+            isValid = false;
         } else {
             subjectError.textContent = '';
             subjectError.style.display = 'none';
@@ -47,9 +52,13 @@ if (form) {
         if (messageInput.value.trim().length < 10) {
             messageError.textContent = 'Message must be 10 characters or more';
             messageError.style.display = 'block';
+            isValid = false; 
         } else {
             messageError.textContent = '';
             messageError.style.display = 'none';
+        }
+        if (isValid) {
+            console.log('Form is valid')
         }
     });
     //clear errors automatically
