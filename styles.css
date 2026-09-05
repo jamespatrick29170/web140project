@@ -80,16 +80,7 @@ form textarea {
     margin-bottom: 16px;
 }
 
-form input:not(:placeholder-shown):invalid,
-form textarea:not(:placeholder-shown):invalid {
-    background-color: lightcoral;
-    border-color: red;
-}
 
-form input:not(:placeholder-shown):invalid + .error-message,
-form textarea:not(:placeholder-shown):invalid + .error-message {
-    display: block;
-}
 
 .error-message {
     display: none;

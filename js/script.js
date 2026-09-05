@@ -41,13 +41,37 @@ if (form) {
             subjectError.style.display = 'none';
         }
         //check message text
-        if (emailInput.value.trim().length < 10) {
-            emailError.textContent = 'Message must be 10 characters or more';
-            emailError.style.display = 'block';
+        if (messageInput.value.trim().length < 10) {
+            messageError.textContent = 'Message must be 10 characters or more';
+            messageError.style.display = 'block';
         } else {
+            messageError.textContent = '';
+            messageError.style.display = 'none';
+        }
+    });
+    //clear errors automatically
+    nameInput.addEventListener('input', () => {
+        if (nameInput.value.trim().length >= 2) {
+            nameError.textContent = '';
+            nameError.style.display = '';   
+        }
+    });
+    emailInput.addEventListener('input', () => {
+        if (emailInput.checkValidity()) {
             emailError.textContent = '';
-            emailError.style.display = 'none'
+            emailError.style.display = 'none';
+        }
+    });
+    subjectInput.addEventListener('input', () => {
+        if (subjectInput.value.trim().length >= 2) {
+            subjectError.textContent = '';
+            subjectError.style.display = 'none'
+        }
+    });
+    messageInput.addEventListener('input', () => {
+        if (messageInput.value.trim().length >= 10) {
+            messageError.textContent = '';
+            messageError.style.display - 'none'
         }
     })
 }
-
