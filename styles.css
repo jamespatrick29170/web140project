@@ -27,6 +27,7 @@ header {
     border: 8px solid var(--navy);
     margin: 0 auto 24px;
     max-width: 1200px;
+    position: relative;
 }
 
 header a {
@@ -100,6 +101,8 @@ legend {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #site-nav ul {
@@ -166,6 +169,13 @@ ul {
 
 #nav-button {
     display: none;
+    font-size: 24px;
+    line-height: 1;
+    padding: 4px 12px;
+    cursor: pointer;
+    background-color: var(--ivory);
+    color: var(--terracotta);
+    border: 2px solid var(--navy);
 }
 
 @media (max-width: 840px) {
@@ -193,8 +203,31 @@ ul {
     }
     #site-nav.nav-open {
         display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--navy-light);
+        padding: 8px 4px;
+        border: 2px solid var(--navy);
+        z-index: 10;
+        width: max-content;
     }
     #nav-button {
         display: block;
+    }
+    #site-nav.nav-open ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    #site-nav.nav-open ul li a {
+        display: block;
+        padding: 10px 16px;
+        text-align: center;
+    }
+    #site-nav.nav-open ul li{
+        border-bottom: 1px solid var(--navy);
+    }
+     #site-nav.nav-open ul li:last-child{
+        border-bottom: none;
     }
 }

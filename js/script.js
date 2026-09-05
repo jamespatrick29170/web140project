@@ -1,23 +1,28 @@
 const form = document.querySelector('form');
-//name variables
-const nameInput = document.querySelector('#name');
-const nameError = nameInput.nextElementSibling;
-// email varis
-const emailInput = document.querySelector('#email');
-const emailError = emailInput.nextElementSibling;
-//subject varis
-const subjectInput = document.querySelector('#subject'); 
-const subjectError = subjectInput.nextElementSibling;
-//message varis
-const messageInput = document.querySelector('#message');
-const messageError = messageInput.nextElementSibling;
 //nav button varis
 const navButton = document.querySelector('#nav-button');
 const siteNav = document.querySelector('#site-nav');
+//github fetch varis
+const ghPfp = document.querySelector('#gh-pfp');
+const ghBio = document.querySelector('#gh-bio');
+const ghRepos = document.querySelector('#gh-repos');
 
 let isValid = true;
 
 if (form) {
+    //name variables
+    const nameInput = document.querySelector('#name');
+    const nameError = nameInput.nextElementSibling;
+    // email varis
+    const emailInput = document.querySelector('#email');
+    const emailError = emailInput.nextElementSibling;
+    //subject varis
+    const subjectInput = document.querySelector('#subject'); 
+    const subjectError = subjectInput.nextElementSibling;
+    //message varis
+    const messageInput = document.querySelector('#message');
+    const messageError = messageInput.nextElementSibling;
+    //check function
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log('name value:', nameInput.value);
@@ -93,3 +98,23 @@ navButton.addEventListener('click', () => {
     const isOpen = siteNav.classList.contains('nav-open');
     navButton.setAttribute('aria-expanded', isOpen)
  })
+
+if (ghPfp) {
+    fetch('https://api.github.com/users/jamespatrick29170')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Github API failed to load')
+            }
+            return response.json();
+        })
+        .then(data => {
+            ghPfp.src = data.avatar_url;
+            ghPfp.alt = `${data.login}'s Github profile picture`;
+            ghBio.textContent = data.bio;
+            ghRepos.textContent = `Public repos: ${data.public_repos}`
+        })
+        .catch(error => {
+            ghBio.textContent = 'Unable to load Github data at this time';
+            console.error('Github fetch failed:', error);
+        });
+ }
