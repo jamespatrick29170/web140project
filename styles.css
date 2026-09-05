@@ -178,6 +178,25 @@ ul {
     border: 2px solid var(--navy);
 }
 
+.github-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid var(--terracotta);
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.gh-pfp {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid var(--terracotta);
+}
+
 @media (max-width: 840px) {
     .featured,
     .projects {

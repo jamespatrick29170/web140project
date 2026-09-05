@@ -19,3 +19,18 @@ Final Project for Campus Web140
 ## Form
 - Added 4th input to form
 - dynamic error states included
+- validation and self checking done
+
+## Keyboard Accesibility
+- checked and functioning
+
+## Hamburger Menu For Mobile
+- replaces the links below 480px 
+- working on all pages
+- menu styled to fit page design
+
+## API fetch
+- added to bottom of projects page
+- styled to fit the aesthetic
+- pulls github info for pfp, repo count and bio
+- card doubles as link to github page

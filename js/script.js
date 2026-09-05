@@ -7,7 +7,6 @@ const ghPfp = document.querySelector('#gh-pfp');
 const ghBio = document.querySelector('#gh-bio');
 const ghRepos = document.querySelector('#gh-repos');
 
-let isValid = true;
 
 if (form) {
     //name variables
@@ -25,6 +24,7 @@ if (form) {
     //check function
     form.addEventListener('submit', (event) => {
         event.preventDefault();
+        let isValid = true;
         console.log('name value:', nameInput.value);
         //check name validity + error
         if (nameInput.value.trim().length < 2) {
@@ -88,7 +88,7 @@ if (form) {
     messageInput.addEventListener('input', () => {
         if (messageInput.value.trim().length >= 10) {
             messageError.textContent = '';
-            messageError.style.display - 'none';
+            messageError.style.display = 'none';
         }
     })
 }
