@@ -62,6 +62,7 @@ form {
     border: 2px solid var(--terracotta);
     border-radius: 8px;
     padding: 16px;
+    margin: 0 auto;
 }
 
 form label {
@@ -111,10 +112,17 @@ ul {
     gap: 24px;
 }
 
-.contacts {
+.contact-links {
     display: flex;
-    gap: 32px;
+    gap: 16px;
     align-items: flex-start;
+    justify-content: center;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .intro {
