@@ -40,9 +40,6 @@ header a {
 
 h1, h2, h3 {
     font-family: var(--font-display);
-}
-
-h1, h2 {
     border-bottom: 2px solid var(--terracotta);
     padding-bottom: 8px;
     margin-bottom: 16px;
@@ -179,6 +176,10 @@ ul {
     gap: 8px;
 }
 
+.featured-card .skills {
+    justify-content: flex-end;
+}
+
 .skills li {
     background-color: var(--terracotta);
     padding: 8px 16px;
@@ -228,6 +229,17 @@ ul {
     .featured,
     .projects {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .featured-card,
+    .github-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .placeholder,
+    .gh-pfp {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
     }
 }
 
