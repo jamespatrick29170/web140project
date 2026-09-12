@@ -63,8 +63,24 @@ if (form) {
             messageError.style.display = 'none';
         }
         if (isValid) {
-            console.log('Form is valid')
-        }
+            const formStatus = document.querySelector('#form-status');
+            fetch('https://formspree.io/f/xbgjbepd', {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        formStatus.textContent = 'Message sent! Thanks for reaching out.';
+                        form.reset();
+                    } else {
+                        formStatus.textContent = 'Something went wrong. Please try again.';
+                    }
+                })
+                .catch(() => {
+                    formStatus.textContent = 'Something went wrong. Please try again.';
+                });
+}
     });
     //clear errors automatically
     nameInput.addEventListener('input', () => {
@@ -99,6 +115,7 @@ navButton.addEventListener('click', () => {
     navButton.setAttribute('aria-expanded', isOpen)
  })
 
+//github card fetch
 if (ghPfp) {
     fetch('https://api.github.com/users/jamespatrick29170')
         .then(response => {
@@ -108,8 +125,6 @@ if (ghPfp) {
             return response.json();
         })
         .then(data => {
-            ghPfp.src = data.avatar_url;
-            ghPfp.alt = `${data.login}'s Github profile picture`;
             ghBio.textContent = data.bio;
             ghRepos.textContent = `Public repos: ${data.public_repos}`
         })

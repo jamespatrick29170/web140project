@@ -51,7 +51,7 @@
             </section>
             <section>
                 <h2>Contact Form</h2>
-                <form novalidate action="https://formspree.io/f/xbgjbepd" method="POST">
+                <form novalidate>
                     <fieldset>
                         <legend>Send me a message</legend>
                         <label for="name">Name</label>
@@ -67,13 +67,13 @@
                         <textarea id="message" name="message" placeholder="Type your message here" minlength="10" required></textarea>
                         <span class="error-message">Message must be at least 10 characters</span>
                         <button type="submit">Send</button>
+                        <span id="form-status" class="form-status" aria-live="polite"></span>
                     </fieldset>
                 </form>
             </section>
             <section>
                 <h2>Contact Me</h2>
                 <ul class="contact-links">
-                    <li><a href="mailto:jamespatrick29170@proton.me">Email</a></li>
                     <li>
                         <a href="https://github.com/jamespatrick29170" target="_blank" rel="noopener noreferrer" aria-label="Github">
                             <img src="../images/GitHub_Invertocat_Black_Clearspace.svg" alt="" class="icon">

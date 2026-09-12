@@ -141,24 +141,36 @@ ul {
     border: 3px solid var(--terracotta);
 }
 
-.featured,
+.featured {
+    display: flex;
+}
+
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
 
 .featured-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
     border: 1px solid var(--terracotta);
     border-radius: 8px;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
 }
 
 .placeholder {
-    width: 100%;
-    aspect-ratio: 1;
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
     object-fit: cover;
-    display: block;
+    flex-shrink: 0;
+    border: 3px solid var(--terracotta);
 }
 
 .skills {
@@ -194,6 +206,13 @@ ul {
     border-radius: 8px;
     text-decoration: none;
     color: inherit;
+    padding: 8px;
+}
+
+#gh-bio {
+    border-bottom: 1px solid var(--terracotta);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .gh-pfp {
