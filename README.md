@@ -34,3 +34,17 @@ Final Project for Campus Web140
 - styled to fit the aesthetic
 - pulls github info for pfp, repo count and bio
 - card doubles as link to github page
+
+## Contact Form 
+- now sends email through formspree link in the js 
+- removed email link at bottom of about me
+- success message on message sending
+
+## Contact Icons
+- Replaced text links with the official brand images from respective websites
+- Keyboard accessible aria enabled
+
+## Cards
+- Rebuilt Home and Projects to fit new card layouts
+- moved github card to home 
+- layout responsive across screen sizes
