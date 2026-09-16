@@ -116,11 +116,11 @@ navButton.addEventListener('click', () => {
  })
 
 document.addEventListener('click', (event) => {
-    const clickedOustisdeNav = !siteNav.contains(event.target);
+    const clickedOustsideNav = !siteNav.contains(event.target);
     const clickedOutsideButton = !navButton.contains(event.target);
     const menuIsOpen = siteNav.classList.contains('nav-open');
 
-    if (clickedOustisdeNav && clickedOutsideButton && menuIsOpen) {
+    if (clickedOustsideNav && clickedOutsideButton && menuIsOpen) {
         siteNav.classList.remove('nav-open');
         navButton.setAttribute('aria-expanded', false);
     }
