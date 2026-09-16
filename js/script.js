@@ -115,6 +115,17 @@ navButton.addEventListener('click', () => {
     navButton.setAttribute('aria-expanded', isOpen)
  })
 
+document.addEventListener('click', (event) => {
+    const clickedOustisdeNav = !siteNav.contains(event.target);
+    const clickedOutsideButton = !navButton.contains(event.target);
+    const menuIsOpen = siteNav.classList.contains('nav-open');
+
+    if (clickedOustisdeNav && clickedOutsideButton && menuIsOpen) {
+        siteNav.classList.remove('nav-open');
+        navButton.setAttribute('aria-expanded', false);
+    }
+});
+
 //github card fetch
 if (ghPfp) {
     fetch('https://api.github.com/users/jamespatrick29170')
