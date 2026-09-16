@@ -3,7 +3,7 @@ Final Project for Campus Web140
 
 ## WebAIM Contrast results
 - #000 (default black text) on #EFE0CD 16.21:1 contrast ratio (body text on page)
-- #1B2A41 on #7C93B3 4.59:1 (header text on header background) 
+- #EFE0CD on #1B2A41 11.15:1 (header text on header background) 
 - #000 on #C4694A 5.46:1 (skills tags text on tag background)
 
 ## Accessibility Fixes
