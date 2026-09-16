@@ -302,7 +302,7 @@ ul {
         right: 0;
         background-color: var(--navy);
         padding: 8px 4px;
-        border: 2px solid var(--navy-light);
+        border: 2px solid var(--terracotta);
         z-index: 10;
         width: max-content;
     }
@@ -319,7 +319,7 @@ ul {
         text-align: center;
     }
     #site-nav.nav-open ul li{
-        border-bottom: 1px solid var(--navy-light);
+        border-bottom: 1px solid var(--terracotta);
     }
      #site-nav.nav-open ul li:last-child{
         border-bottom: none;
